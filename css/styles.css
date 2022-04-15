@@ -21,9 +21,9 @@ h1 {
   height: 600px;
 }
 
-@media  (min-width: 240px) {
+@media screen and (min-width: 240px) {
   .img {
-         height: 1000px;
+         height: 600px;
          
   }
 }
