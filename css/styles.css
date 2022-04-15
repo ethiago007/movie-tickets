@@ -17,4 +17,13 @@ h1 {
   background-size: cover;
   background-position: center;
 }
+.img {
+  height: 600px;
+}
 
+@media  (min-width: 240px) {
+  .img {
+         height: 1000px;
+         
+  }
+}
