@@ -1,0 +1,20 @@
+#show-contact {
+    display: none;
+  }
+h1 {
+    text-align: center;
+}
+#warning {
+  display: none;
+  color: black;
+}
+.nav-item {
+  margin: 30px;
+}
+.navbar {
+  /* background-image: url(../img/popcorn.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
