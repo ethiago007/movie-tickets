@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>www.MKODcinemas.com</title>
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/th.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"font-size="xx-large">
+              <strong><b>  MKODcinemas  </b></strong>
+              </a>
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html"><b>HOME</b></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <b> NOW SHOWING</b>
+                </a>
+                <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="family.html#batman">BATMAN</a></li>
+                  <hr>
+                  <li><a class="dropdown-item" href="kids.html#red">TURNING RED</a></li>
+                  <hr>
+                  <li><a class="dropdown-item" href="family.html#uncharted">UNCHARTED</a></li>
+                  <hr>
+                  <li><a class="dropdown-item" href="kids.html#sonic">SONIC THE HEDGEHOG</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>  MOVIE CATEGORY</b>
+                </a>
+                <ul class="dropdown-menu  dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item active" href="adult.html">ADULT & TEENS</a></li>
+                  <hr>
+                  <li><a class="dropdown-item" href="kids.html">KIDS </a></li>
+                  <hr>
+                  <li><a class="dropdown-item" href="family.html">FAMILY</a></li>
+                  <hr>
+                  <li><a class="dropdown-item" href="#">FANTASY/SUPERHERO</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#"><b>ABOUT US</b></a>
+              </li>
+             
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+    <u><b><h1 class="adult-ticket">ADULT & TEENS Ticketing</h1></b></u>
+    <form id="adult-teen">
+        <div class="form-group">
+            <h3>Please select a movie</h3>
+               <select id="movie">
+                 <option value="No Movie Selected">Movie Name</option>
+                 <option value="A BLOOD COVENANT">A BLOOD COVENANT</option>
+                 <option value="CITY HUSTLERS">CITY HUSTLERS</option>
+                 <option value="FANTASTIC BEASTS">FANTASTIC BEASTS</option>
+                 <option value="I AM NAZZY">I AM NAZZY</option>
+                 <option value="KING OF THIEVES">KING OF THIEVES</option>
+                 <option value="SK.G.F: CHAPTER 2">SK.G.F: CHAPTER 2</option>
+                 <option value="A SIMPLE LIE">A SIMPLE LIE</option>
+                 <option value="GALAMSEY">GALAMSEY</option>
+               </select>
+            <br> <br> 
+            <h3>Please select a time</h3>
+            <select id="time">
+              <option value="No Time Selected">Please select a showtime</option>
+              <option value="10:30am">10:30am</option>
+              <option value="12:00pm">12:00pm</option>
+              <option value="03:00pm">03:00pm</option>
+              <option value="06:45pm">06:45pm</option>
+              <option value="09:15pm">09:15pm</option>
+            </select>
+            <h3>Please select the type of ticket</h3>
+            <select  id="tickettype">
+                <option value="REGULAR">REGULAR</option>
+                <option value="VIP">VIP</option>
+                <option value="PREMIUM">PREMIUM</option>
+            </select>
+            <h3>Please Number of Tickets</h3>
+            <select id="number">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <br> <br> <button type="submit" class="btn btn-success">BUY TICKET</button>         
+            <button type="reset" value="reset" class="btn btnreset btn-primary" onclick="window.location.reload()">CANCEL PURCHASE</button>
+        </div>
+    </form>
+    <ul class="display">
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </body>

@@ -1,126 +1,53 @@
-// Business Logic for AddressBook ---------
-function AddressBook() {
-  this.contacts = {};
-  this.currentId = 0;
-}
-
-AddressBook.prototype.addContact = function(contact) {
-  contact.id = this.assignId();
-  this.contacts[contact.id] = contact;
+function Ticket (movie, time, tickettype) {
+  this.movie = movie;
+  this.time = time;
+  this.tickettype = tickettype;
 };
-
-AddressBook.prototype.assignId = function() {
-  this.currentId += 1;
-  return this.currentId;
-};
-
-AddressBook.prototype.findContact = function(id) {
-  if (this.contacts[id] != undefined) {
-    return this.contacts[id];
+Ticket.prototype.fullTicket = function() {
+  let total = 3000;
+  if (this.tickettype === "REGULAR" && (this.time === "12:00pm" || this.time === "3:00pm"))
+  {
+  total -= 0;
+} else if (this.tickettype === "VIP"){
+  total += 500;
   }
-  return false;
-};
-
-AddressBook.prototype.deleteContact = function(id) {
-  if (this.contacts[id] === undefined) {
-    return false;
+  else if (this.tickettype === "PREMIUM"){
+  total += 1000;
+  } if (this.tickettype === "REGULAR" && (this.time === "06:45pm" || this.time === "09:15pm"))
+  {
+  total += 500;
+} else if (this.tickettype === "VIP") {
+    total += 1000;
   }
-  delete this.contacts[id];
-  return true;
+  else if (this.tickettype === "PREMIUM") {
+    total += 1500;
+  } if (this.tickettype === "REGULAR" && (this.time === "10:30am" )) {
+    total -= 500;
+  } else if (this.tickettype === "VIP") {
+    total -= 1000 ;
+  } if (this.tickettype === "PREMIUM"){
+    total = total
+  }
+  return total;
 };
-function displayContactDetails(addressBookToDisplay) {
-  let contactsList = $("ul#contacts");
-  let htmlForContactInfo = "";
-  Object.keys(addressBookToDisplay.contacts).forEach(function(key) {
-    const contact = addressBookToDisplay.findContact(key);
-    htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
-  });
-  contactsList.html(htmlForContactInfo);
-}
-
-// Business Logic for Contacts ---------
-function Contact(firstName, lastName, phoneNumber) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.phoneNumber = phoneNumber;
-}
-
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
-};
-function myFunction() {
-  document.getElementById("myForm").reset();
-}
-function showContact(contactId) {
-  const contact = addressBook.findContact(contactId);
-  $("#show-contact").show();
-  $(".first-name").html(contact.firstName);
-  $(".last-name").html(contact.lastName);
-  $(".phone-number").html(contact.phoneNumber);
-
-  let buttons = $("#buttons");
-  buttons.empty();
-  buttons.append("<button class='deleteButton btn btn-danger' id=" +  + contact.id + ">Delete</button>");
-}
-
-function attachContactListeners() {
-  $("ul#contacts").on("click", "li", function() {
-    showContact(this.id);
-  });
-  
-  $("#buttons").on("click", ".deleteButton", function() {
-    addressBook.deleteContact(this.id);
-    $("#show-contact").hide();
-    displayContactDetails(addressBook);
-  });
-}
-
-
-// User Interface Logic ---------
-let addressBook = new AddressBook();
-
 $(document).ready(function() {
- 
-  attachContactListeners();
-  $("form#new-contact").submit(function(event) {
+  $("form#adult-teen").submit(function(event){
+    let movie = $("select#movie").val();
+    let time = $("select#time").val();
+    let tickettype = $("select#tickettype").val();
+    let ticketNum = parseInt($("select#number").val());
+    let newTicket = new Ticket(movie, time, tickettype);
+    let total = 3000;
 
-    event.preventDefault();
-    const inputtedFirstName = $("input#new-first-name").val();
-    const inputtedLastName = $("input#new-last-name").val();
-    const inputtedPhoneNumber = $("input#new-phone-number").val();
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input#new-phone-number").val("");
-    if  (inputtedFirstName === "" && inputtedLastName === "" && inputtedPhoneNumber === ""){
-      $("#warning").show();
-    } else{
-     
-    
+    let grandTotal = newTicket.fullTicket() * ticketNum;
+    $(".display").empty();
+    $(".display").append("<li class='ticketNumli'>" + ticketNum + " ticket(s) </li>");
+    $(".display").append("<li class='movieli'>" + movie + "</li>");
+    $(".display").append("<li class='timeli'> At " + time + " </li>");
+    $(".display").append("<li class='ageli'> For " + tickettype + " </li>");
+    $(".display").append("<li> Total: #" + grandTotal + "</li>");
+    $(".ticket").show();
 
-    let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
-    addressBook.addContact(newContact);
-    console.log(addressBook.contacts);
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
-  //   $(".contact#show-contact").click(function () {
-     
-    }
-    let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
-    addressBook.addContact(newContact);
-    console.log(addressBook.contacts);
-   
-  //   $("#show-contact").show();
-  //   $("#show-contact h2").text(newContact.fullName());
-  // });
-  $(".contact").last().click(function() {
-    $("#show-contact").show();
-    $("#show-contact h2").text(newContact.fullName());
-    $(".first-name").text(newContact.firstName);
-    $(".last-name").text(newContact.lastName);
-    $(".phone-number").text(newContact.phoneNumber);
-    });
-  
-  
-    event.preventDefault();
-
-  });
+  event.preventDefault();
+});
 });
