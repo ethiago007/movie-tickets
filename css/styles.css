@@ -36,7 +36,15 @@ h1 {
 .button {
   text-align: center;
 }
-
+.lemao {
+  background-image: url(../img/photo-1595769816263-9b910be24d5f.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.about {
+  background-color: black;
+}
 
 @media screen and (min-width: 240px) {
   .img {
