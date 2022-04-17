@@ -10,6 +10,7 @@ h1 {
 }
 .nav-item {
   margin: 30px;
+  color: white;
 }
 .navbar {
   /* background-image: url(../img/popcorn.jpg); */
@@ -20,6 +21,22 @@ h1 {
 .img {
   height: 600px;
 }
+.display {
+ 
+  font-size: 20px;
+  list-style: none;
+  
+  }
+.ticket {
+  display: none;
+}
+.body {
+  background-color: chocolate;
+}
+.button {
+  text-align: center;
+}
+
 
 @media screen and (min-width: 240px) {
   .img {

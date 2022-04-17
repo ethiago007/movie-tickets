@@ -30,6 +30,16 @@ Ticket.prototype.fullTicket = function() {
   }
   return total;
 };
+
+function Confirm () {
+ 
+if (person1 === password) {
+  alert("Purchase Successful:)");
+} else if (person1 !== password) {
+  alert("WRONG PASSWORD!!!!");
+}
+
+};
 $(document).ready(function() {
   $("form#adult-teen").submit(function(event){
     let movie = $("select#movie").val();
@@ -41,13 +51,35 @@ $(document).ready(function() {
 
     let grandTotal = newTicket.fullTicket() * ticketNum;
     $(".display").empty();
-    $(".display").append("<li class='ticketNumli'>" + ticketNum + " ticket(s) </li>");
-    $(".display").append("<li class='movieli'>" + movie + "</li>");
-    $(".display").append("<li class='timeli'> At " + time + " </li>");
-    $(".display").append("<li class='ageli'> For " + tickettype + " </li>");
-    $(".display").append("<li> Total: #" + grandTotal + "</li>");
+    $(".display").append("<li class='ticketNumli'> Number of tickets -->" + ticketNum + " ticket(s) </li>");
+    $(".display").append( "<li class='movieli'> Movie name -->"  + movie + "</li>");
+    $(".display").append("<li class='timeli'> At  " + time + " </li>");
+    $(".display").append("<li class='tickettypeli'> For " + tickettype + " </li>");
+    $(".display").append("<li> Total Cost of ticket is #" + grandTotal + "</li>");
     $(".ticket").show();
-
+   
+     
   event.preventDefault();
 });
 });
+$(document).ready(function() {
+  $("form#adultForm").submit(function(event){
+    event.preventDefault();
+    let username = $("#username").val();
+    let password = $("#password").val();
+    event.preventDefault();
+  });
+});
+$(document).ready(function() {
+  $("form#confirmation").submit(function(event){
+    event.preventDefault();
+    let person1 = $("#person1").val();
+     
+    event.preventDefault();
+  });
+});
+
+
+
+
+
