@@ -76,73 +76,106 @@
         </div>
     </nav>
 
+    <form id="adultForm">
+        <h1>Please Sign In To Your Account</h1>
 
+        <label for="Username">Username</label>
+        <input type="text" id="Username" class="form-control" required>
 
-
-
-    <u><b>
-            <h1 class="adult-ticket">FAMILY Ticketing</h1>
-        </b></u>
-<br>
-    <form id="adult-teen">
-
-        <div class="row">
-            <div class="col-md-3 col-sm-3">
-                <h3>Please select a movie</h3>
-                <select class="form-select" aria-label="Default select example" id="movie">
-                    <option value="No Movie Selected">Movie Name</option>
-                    <option value="SONIC THE HEDGEHOG">THE BATMAN</option>
-                    <option value="TURNING RED">THE CONTRACTOR</option>
-                    <option value="THE BAD GUYS">FANTASTIC BEASTS</option>
-                    <option value="SONIC THE HEDGEHOG">MORBIUS</option>
-                    <option value="TURNING RED">A HAPPY SURPRISE</option>
-                    <option value="THE BAD GUYS">UNCHARTED</option>
-
-                </select>
+        </div>
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" required>
+        <br><br>
+        <div class="row button">
+            <div class="col-md-6 col-sm-6">
+                <button type="submit" class="btn btn-success"> SIGN IN</button>
             </div>
-
-            <div class="col-md-3 col-sm-3">
-                <h3>Please select a time</h3>
-                <select class="form-select" aria-label="Default select example" id="time">
-                    <option value="No Time Selected">Please select a showtime</option>
-                    <option value="10:30am">10:30am</option>
-                    <option value="12:00pm">12:00pm</option>
-                    <option value="03:00pm">03:00pm</option>
-                    <option value="06:45pm">06:45pm</option>
-                    <option value="09:15pm">09:15pm</option>
-                </select>
-            </div>
-
-            <div class="col-md-3 col-sm-3">
-                <h3>Please select the type of ticket</h3>
-                <select class="form-select" aria-label="Default select example" id="tickettype">
-                    <option value="REGULAR">REGULAR</option>
-                    <option value="VIP">VIP</option>
-                    <option value="PREMIUM">PREMIUM</option>
-                </select>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <h3>Please Number of Tickets</h3>
-                <select class="form-select" aria-label="Default select example" id="number">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
+            <div class="col-md-6 col-sm-6">
+                <button type="reset" value="reset" class="btn btnreset btn-danger"
+                    onclick="window.location.reload()">CANCEL
+                </button>
             </div>
         </div>
-        <br> <button type="submit" class="btn btn-success">BUY TICKET</button>
-        <button type="reset" value="reset" class="btn btnreset btn-danger" onclick="window.location.reload()">CANCEL
-            PURCHASE</button>
-
     </form>
+
+    <div class="display1">
+
+        <u><b>
+                <h1 class="adult-ticket">ADULT & TEENS Ticketing</h1>
+            </b></u>
+        <div class="jumbotron bg-danger">
+            <b><strong>
+                    <p id="warning">Please Fill In The Fields!!!!!!</p>
+                </strong></b>
+        </div>
+
+
+
+        <u><b>
+                <h1 class="adult-ticket">FAMILY Ticketing</h1>
+            </b></u>
+        <br>
+        <form id="adult-teen">
+
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <h3>Please select a movie</h3>
+                    <select class="form-select" aria-label="Default select example" id="movie">
+                        <option value="">Movie Name</option>
+                        <option value="SONIC THE HEDGEHOG">THE BATMAN</option>
+                        <option value="TURNING RED">THE CONTRACTOR</option>
+                        <option value="THE BAD GUYS">FANTASTIC BEASTS</option>
+                        <option value="SONIC THE HEDGEHOG">MORBIUS</option>
+                        <option value="TURNING RED">A HAPPY SURPRISE</option>
+                        <option value="THE BAD GUYS">UNCHARTED</option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <h3>Please select a time</h3>
+                    <select class="form-select" aria-label="Default select example" id="time">
+                        <option value="">Please select a showtime</option>
+                        <option value="10:30am">10:30am</option>
+                        <option value="12:00pm">12:00pm</option>
+                        <option value="03:00pm">03:00pm</option>
+                        <option value="06:45pm">06:45pm</option>
+                        <option value="09:15pm">09:15pm</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <h3>Please select the type of ticket</h3>
+                    <select class="form-select" aria-label="Default select example" id="tickettype">
+                        <option value="REGULAR">REGULAR</option>
+                        <option value="VIP">VIP</option>
+                        <option value="PREMIUM">PREMIUM</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <h3>Please Number of Tickets</h3>
+                    <select class="form-select" aria-label="Default select example" id="number">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <br> <button type="submit" class="btn btn-success">BUY TICKET</button>
+            <button type="reset" value="reset" class="btn btnreset btn-danger" onclick="window.location.reload()">CANCEL
+                PURCHASE</button>
+
+        </form>
+    </div>
     <br>
     <div class="container ticket">
-        <div class="card mb-3" >
+        <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="img/th.jpg" class="img-fluid rounded-start" alt="..." style="height: 400px; width: 300px;">
+                    <img src="img/th.jpg" class="img-fluid rounded-start" alt="..."
+                        style="height: 400px; width: 300px;">
                 </div>
                 <div class="col-md-8">
                     <div class="card-header">
@@ -154,12 +187,12 @@
                         <h5 class="card-title head">MOVIE TICKET</h5>
                         <p class="card-text">
                         <ul class="display">
-    
+
                         </ul>
                         </p>
                         <button class="btn btn-success " type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" >Finalize Purchase</button>
-    
+                            data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Finalize Purchase</button>
+
                         <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop"
                             aria-labelledby="offcanvasTopLabel">
                             <div class="offcanvas-header">
@@ -169,11 +202,11 @@
                             </div>
                             <div class="offcanvas-body">
                                 <form id="confirmation">
-    
+
                                     <div class="form-group">
                                         <b> <label for="person1">Your Password For Confirmation</label></b>
                                         <input id="person1" class="form-control" type="password" required>
-    
+
                                     </div>
                                     <br> <button type="submit" class="btn btn-success clickable">PURCHASE</button>
                                 </form>
@@ -183,7 +216,7 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     </div>
 
 
