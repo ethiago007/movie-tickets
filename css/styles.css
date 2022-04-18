@@ -25,7 +25,10 @@ h1 {
  
   font-size: 20px;
   list-style: none;
-  
+  text-align: center;
+  }
+  .head {
+    text-align: center;
   }
 .ticket {
   display: none;
@@ -45,7 +48,13 @@ h1 {
 .about {
   background-color: black;
 }
-
+#warning {
+  display: none;
+  color: black;
+}
+.display1 {
+  display: none;
+}
 @media screen and (min-width: 240px) {
   .img {
          height: 600px;
